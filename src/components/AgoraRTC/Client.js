@@ -5,17 +5,15 @@ import Display from './Display';
 
 class Client extends React.Component {
   static contextType = Context;
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { clients } = this.context;
+    const { width, height } = this.props;
 
     console.log('clients > ', clients);
     return (
-      <div>
+      <div className="agora_client">
         {_.map(clients, (v, k) => {
-          return <Display key={k} stream={v} />
+          return <Display key={k} stream={v} width={width} height={height} />
         })}
       </div>
     )

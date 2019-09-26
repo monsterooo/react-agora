@@ -9,10 +9,6 @@ class Display extends React.Component {
     super(props);
     this.init = false;
   }
-  componentDidMount() {
-    const { stream } = this.props;
-    console.log('------------Dispaly > ', stream);
-  }
   componentDidUpdate(prevProps) {
     const { stream } = this.props;
     const id = `${prefix}${stream.getId()}`;
@@ -22,11 +18,11 @@ class Display extends React.Component {
     }
   }
   render() {
-    const { stream } = this.props;
+    const { stream, width, height } = this.props;
     const id = `${prefix}${stream.getId()}`;
 
     return (
-      <div id={id} style={{ opacity: 0.1 }}>
+      <div class="agora_display" id={id} style={{ width, height, opacity: 0.05 }}>
         {stream.getId()}
       </div>
     )

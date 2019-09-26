@@ -7,7 +7,7 @@ import './App.css';
 
 // import Join from './components/Video/Join';
 
-const appId = '';
+const appId = '0f97036c4bd5461eae270fe4faaa5bc7';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,8 +40,8 @@ class App extends React.Component {
           }}
         >
           <Join />
-          <LocalStream videoProfile="360p" />
-          <Client />
+          <LocalStream videoProfile="360p" control />
+          <Client width={100} height={100} />
           {/* <div>
             <p>box1</p>
             {!move ? <LocalStream videoProfile="360p" /> : null}

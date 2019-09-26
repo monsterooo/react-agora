@@ -1,5 +1,5 @@
 import React from 'react';
-import AgoraRTCSDK from '../../utils/AgoraRTCSDK-2.9.0';
+import AgoraRTCSDK from 'agora-rtc-sdk';
 import Context from './Context';
 
 class Join extends React.Component {

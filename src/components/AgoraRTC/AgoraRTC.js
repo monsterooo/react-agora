@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import AgoraRTCSDK from 'agora-rtc-sdk';
 import Context from './Context';
-import AgoraRTCSDK from '../../utils/AgoraRTCSDK-2.9.0';
 
 const playId = 'agora_rtc_localstream';
 
@@ -36,7 +36,6 @@ class AgoraRTC extends React.Component {
         return v.kind === 'videoinput';
       }));
 
-      console.log('设备 > ', defaultAudio, defaultVideo);
       this.setState({
         devices,
         defaultVideo,
@@ -109,7 +108,7 @@ class AgoraRTC extends React.Component {
 
     return (
       <Context.Provider value={this.getContext()}>
-        <div>
+        <div className="agora">
           {children}
         </div>
       </Context.Provider>
